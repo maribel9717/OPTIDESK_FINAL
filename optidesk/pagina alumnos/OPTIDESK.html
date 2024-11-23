@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPTIDESK</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('images/image (1).png') no-repeat center center;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: url('images/Pagina Principal.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 2;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>OPTIDESK</h1>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#encuestas">Responder Encuestas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#notificaciones">Notificaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#actualizarDatos">Actualizar Datos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#consultaDatos">Consulta de Datos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#incidencias">Levantamiento de Incidencias</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container my-4">
+        <h2 class="text-center">Bienvenido al Portal de Alumnos</h2>
+
+        <!-- Responder Encuestas -->
+        <div class="card my-3" id="encuestas">
+            <div class="card-body">
+                <h5 class="card-title">1. Responder Encuestas</h5>
+                <p class="card-text">Accede y responde encuestas para contribuir a la toma de decisiones.</p>
+                <a href="encuesta.html" class="btn btn-danger">Responder Encuesta</a>
+            </div>
+        </div>
+
+        <!-- Visualización de Notificaciones -->
+        <div class="card my-3" id="notificaciones">
+            <div class="card-body">
+                <h5 class="card-title">2. Visualización de Notificaciones</h5>
+                <p class="card-text">Revisa notificaciones importantes sobre modificaciones de horarios o cancelación de grupos.</p>
+                <a href="notificaciones.html" class="btn btn-danger">Ver Notificaciones</a>
+            </div>
+        </div>
+
+        <!-- Actualizar Datos Estadísticos -->
+        <div class="card my-3" id="actualizarDatos">
+            <div class="card-body">
+                <h5 class="card-title">3. Actualizar Datos Estadísticos</h5>
+                <p class="card-text">Actualiza tus datos académicos para mantener un seguimiento en tu proceso.</p>
+                <a href="Actualizazcion_.html" class="btn btn-danger">Actualizar Datos</a>
+                <div class="text-muted mt-2" id="actualizarOutput"></div>
+            </div>
+        </div>
+
+        <!-- Consulta de Datos -->
+        <div class="card my-3" id="consultaDatos">
+            <div class="card-body">
+                <h5 class="card-title">4. Consulta de Datos</h5>
+                <p class="card-text">Consulta información actualizada sobre tus cursos y horarios.</p>
+                <a href="Consulta_.html" class="btn btn-danger">Consultar Datos</a>
+                <div class="text-muted mt-2" id="consultaOutput"></div>
+            </div>
+        </div>
+
+        <!-- Levantamiento de Incidencias -->
+        <div class="card my-3" id="incidencias">
+            <div class="card-body">
+                <h5 class="card-title">5. Levantamiento de Incidencias</h5>
+                <p class="card-text">Solicita asistencia técnica en caso de problemas durante el proceso de inscripción.</p>
+                <a href="incidencias.html" class="btn btn-danger">Levantar Incidencia</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function actualizarDatos() {
+            document.getElementById("actualizarOutput").innerText = "Datos académicos actualizados correctamente.";
+        }
+
+        function consultarDatos() {
+            document.getElementById("consultaOutput").innerText = "Consultando datos de cursos...";
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Derechos Reservados. Creado por Equipo 8 de Ingeniería de Software / Matemáticas Aplicadas y Computación</p>
+        <p>Hernández Espinoza Gabriel Emanuel, Juan Diego Gallegos Bedolla, Olmos Peña Ulises y Maribel Sánchez Alvarado</p>
+        <p>Profesora: Maritza Nova Juárez</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
